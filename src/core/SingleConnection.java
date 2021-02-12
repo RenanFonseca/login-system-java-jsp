@@ -22,11 +22,12 @@ public class SingleConnection {
 	private static void connect() {
 		try {
 			if(connection == null) {
-				Class.forName("org.postregsql.Driver");
+				Class.forName("org.postgresql.Driver");
 				connection = DriverManager.getConnection(db, user, password);
 				connection.setAutoCommit(false);
 			}
 		} catch (Exception e) {
+			e.printStackTrace();
 			throw new RuntimeException("Erro ao conectar com o banco de dados");
 		}
 	}

@@ -22,6 +22,7 @@ public class Filter implements javax.servlet.Filter {
 			throws IOException, ServletException {
 		
 		try {
+			SingleConnection.getConnection();
 			chain.doFilter(request, response);
 			connection.commit();
 		} catch (Exception e) {

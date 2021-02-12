@@ -12,7 +12,7 @@
 	
 	<div class="grid">
 
-        <form action="" class="form login">
+        <form action="LoginServlet" method="post" class="form login">
             <div class="form__field">
                 <label for="login__username">
                     <svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user" ></use></svg>
